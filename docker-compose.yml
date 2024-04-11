@@ -1,0 +1,30 @@
+version: "1"
+
+services:
+  backend:
+    build: ./backend  
+    environment:
+      - POSTGRES_DB=database
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5000:5000"
+    links:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000" 
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=database
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./init.sql:/database/docker-entrypoint-initdb.d/init.sql
+
