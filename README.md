@@ -29,7 +29,7 @@ kubectl apply -f k8s/backend-deployment.yaml
 
 kubectl apply -f k8s/backend-service.yaml
 
-kubectl apply -f k8s/ingress-nginx-deploy.yaml
+kubectl apply -f ingress-nginx-deploy.yaml
 
 
 # test
