@@ -8,7 +8,7 @@ docker-compose up --build
 
 ---
 
-#Instructiuni kubernetes
+# Instructiuni kubernetes
 
 kubectl apply -f k8s/namespace.yaml
 kubectl config set-context --current --namespace=myapp-namespace
@@ -23,7 +23,7 @@ kubectl apply -f k8s/backend-service.yaml
 
 ---
 
-#Astea is ca sa testezi daca merg
+# Astea is ca sa testezi daca merg
 
 kubectl get pods
 kubectl get deployment
