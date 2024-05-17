@@ -4,11 +4,12 @@ import { Container, Typography, TextField, Button, List, ListItem, ListItemText,
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const api = axios.create({
-  baseURL: 'http://myapp.example.com/backend',
+  baseURL: 'http://backend-service.myapp-namespace.svc.cluster.local:5000',
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -22,7 +23,6 @@ const App = () => {
   const fetchItems = () => {
     api.get('/items')
       .then(response => {
-        // Map response data to format expected by the component
         const formattedItems = response.data.map(item => ({
           id: item[0], // Assuming item[0] is the id
           name: item[1], // Assuming item[1] is the name
