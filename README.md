@@ -6,7 +6,6 @@ chrome.exe --disable-web-security --user-data-dir="C:/chrome-dev"
 
 docker-compose up --build
 
----
 
 # Instructiuni kubernetes
 
@@ -30,9 +29,8 @@ kubectl apply -f k8s/backend-deployment.yaml
 
 kubectl apply -f k8s/backend-service.yaml
 
----
 
-# Astea is ca sa testezi daca merg
+# test
 
 kubectl get pods
 
