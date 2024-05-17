@@ -6,7 +6,7 @@ app = Flask(__name__)
 dbname = os.environ.get('POSTGRES_DB')
 dbuser = os.environ.get('POSTGRES_USER')
 dbpassword = os.environ.get('POSTGRES_PASSWORD')
-dbhost = "postgres"
+dbhost = os.environ.get('DB_HOST')
 
 # Connect to PostgreSQL database
 try:

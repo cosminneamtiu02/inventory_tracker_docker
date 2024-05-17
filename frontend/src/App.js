@@ -4,7 +4,7 @@ import { Container, Typography, TextField, Button, List, ListItem, ListItemText,
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'http://myapp.example.com/backend',
   headers: {
     'Content-Type': 'application/json',
   },
